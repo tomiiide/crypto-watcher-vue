@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import CryptoItem from './Crypto-item';
 export default {
   name: 'CryptoList',
   data () {
@@ -16,7 +17,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .header{
-    
-  }
 </style>
