@@ -13,7 +13,13 @@
 <script>
 export default {
   name: 'CryptoItem',
-  props : ['name','image','price','percent_change24H','percent_change7d'] ,
+  props : [
+    'name',
+    'image',
+    'price',
+    'percent_change24H',
+    'percent_change7d'
+    ] ,
   data () {
     return {
     }

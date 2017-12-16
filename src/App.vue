@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <CrptoList/>
+    <CryptoList/>
   </div>
 </template>
 
 <script>
 import CryptoList from './components/CryptoList'
-
 export default {
   name: 'app',
   components: {

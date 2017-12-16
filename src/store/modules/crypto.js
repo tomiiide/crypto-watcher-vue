@@ -7,6 +7,11 @@ const state = {
   status: null
 }
 
+const getters = {
+  checkStatus: state => state.status,
+  allCryptos: state => state.cryptos
+}
+
 // actions
 const actions = {
   getCryptos ({commit, state}) {
@@ -23,7 +28,14 @@ const mutations = {
     state.status = 'FETCHING'
   },
   [types.FETCH_CRYPTOS_SUCCESS] (state, { fetchedCryptos }) {
-    state.crypts = fetchedCryptos
+    state.cryptos = fetchedCryptos
     state.status = 'FETCHED'
   }
+}
+
+export default {
+  state,
+  getters,
+  actions,
+  mutations
 }
