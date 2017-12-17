@@ -17,7 +17,8 @@ const actions = {
   getCryptos ({commit, state}) {
     commit(types.FETCHING_CRYPTOS)
     crypto.getCryptos(
-      (fetchedCryptos) => commit(types.FETCH_CRYPTOS_SUCCESS, { fetchedCryptos })
+      (fetchedCryptos) => commit(types.FETCH_CRYPTOS_SUCCESS, { fetchedCryptos }),
+      () => commit(types.FETCH_CRYPTOS_FAILURE)
     )
   }
 }
@@ -30,6 +31,9 @@ const mutations = {
   [types.FETCH_CRYPTOS_SUCCESS] (state, { fetchedCryptos }) {
     state.cryptos = fetchedCryptos
     state.status = 'FETCHED'
+  },
+  [types.FETCH_CRYPTOS_FAILURE] (state) {
+    state.status = 'FAILED'
   }
 }
 
