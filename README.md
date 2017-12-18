@@ -1,4 +1,5 @@
 # crypto-watcher-vue
+ [View Demo here] (https://tomiiide.github.io/crypto-watcher-vue/dist/index.html)
 
 > A simple web app that displays the current prices of popular crypto-currencies
 
