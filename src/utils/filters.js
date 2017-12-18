@@ -1,5 +1,5 @@
 var getIcon = (symbol) => {
-  return '/static/SVG/' + symbol + '.svg'
+  return 'static/SVG/' + symbol + '.svg'
 }
 
 export default {
