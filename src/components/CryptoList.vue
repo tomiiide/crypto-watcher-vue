@@ -54,7 +54,10 @@ export default {
     margin-top : 80px;
   }
 
-  @media screen  {
-    
+/* Smartphone */
+ @media only screen and (min-width : 320px) and (max-width : 720px) {
+  .crypto{
+    width: 99%;
   }
+}
 </style>

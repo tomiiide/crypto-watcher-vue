@@ -17,5 +17,7 @@ export default {
     padding : 20px;
     font-size : 24px;
     font-weight: bold;
+    background-color: white;
+    z-index: 9;
   }
 </style>

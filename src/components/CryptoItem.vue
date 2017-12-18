@@ -1,20 +1,23 @@
 <template>
   <div class="crypto-item">
     <div class="details">
-    <img src="" alt="">
+    <img :src=" symbol | getIcon " alt="">
     <span class="name">{{name}} ({{symbol}})</span>
-    <span class="price">{{price}}</span>
+    <span class="price">$ {{price}}</span>
     </div>
     <div class="meta">
-      <span>{{percentChange24h}}</span>
-      <span>{{percentChange7d}}</span>
+      <span>% change</span>
+      <span> 24H: {{percentChange24h}}</span>
+      <span> 7D:{{percentChange7d}}</span>
     </div>
   </div>
 </template>
 
 <script>
+import filters from '../utils/filters'
 export default {
   name: 'CryptoItem',
+  filters : filters,
   props : [
     'name',
     'symbol',
@@ -47,12 +50,20 @@ export default {
    display: flex;
    justify-content: flex-start;
    font-size : 18px;
+   position: relative;
  }
 
  .crypto-item .details span{
-   width : 30%;
+   width : 50%;
    text-align: left;
    padding : 0 40px;
+   
+ }
+
+ .crypto-item .details img{
+    position: relative;
+    width: 10%;
+    height: 100%;
  }
 
  .crypto-item .meta{

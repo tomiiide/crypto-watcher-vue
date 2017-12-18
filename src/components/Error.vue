@@ -1,7 +1,7 @@
 <template>
   <div class="error">
     Oops, {{msg}}
-    <p><small>looks like a rat chewed up some wires. Know any exterminators, please let us know?</small></p>
+    <p><small>Looks like a rat chewed up some wires. Know any exterminators? please let us know.</small></p>
   </div>
 </template>
 
